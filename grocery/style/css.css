@@ -1,0 +1,221 @@
+/*COLOR PALET
+-DARK BLUE #090e19
+-OCEAN BLUE #1f2d51
+-light blue #618685
+-White #fff
+*/
+body{
+	background-color:#eee;
+	margin:0;
+	padding:0;
+	background-color:#eee;
+	color:#eee;
+}
+
+*{
+	font-family: 'Montserrat', arial;
+	font-weight:bold;
+}
+
+span{
+	pointer-events: none;
+}
+
+#wrapper{
+	display:grid;
+	grid-template-columns: 10px 2fr 2fr 10px;
+	grid-template-rows: 100px 580px 50px;
+	grid-template-areas:
+	"header header header header"
+	". section bank ."
+	"footer footer footer footer";
+	grid-gap:1em;
+	
+}
+
+#header{
+	display:grid;
+
+	grid-area:header;
+	background-color: #1f2d51;
+	color:white;
+	text-align:center;
+	font-size:50px;
+
+	align-content: center;
+	justify-content: center;
+	box-shadow:0px 0px 5px black;
+
+}
+#bank{
+	grid-area:bank;
+	display:grid;
+	background-color:#1f2d51;
+	border-radius:5px;
+	height:50%;
+	justify-content: center;
+}
+
+	#bank h2{
+		text-align: center;
+	}
+#bankDisplay{
+	display:grid;
+	background-color:#090e19;
+	width:400px;
+	height:200px;
+	border-radius:5px;
+	position:relative;
+	top:-15px;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	font-size:90px;
+}
+
+
+#section{
+	position:relative;
+	display:grid;
+	grid-area:section;
+	background-color:#1f2d51;
+	border-radius: 5px;
+	color:grey;
+	padding-top:15px;
+	grid-template-rows:auto auto auto;
+	grid-template-areas: 
+	" allBTN "
+	" Display "
+	"Total";
+
+	;
+	justify-content: center;
+}
+
+	#allBTN{
+		grid-area:allBTN;
+		display:grid;
+		grid-template-columns:1fr 1fr 1fr 1fr;
+		grid-template-areas:
+		"cheese milk wine chips"; 
+		grid-gap:3em;
+	}
+		.cheese{
+			grid-area:cheese;
+		}
+		.milk{
+			grid-area:milk;
+		}
+		.wine{
+			grid-area:wine;
+		}
+		.chips{
+			grid-area:chips;
+		}
+	#allBTN button{
+		background-color: #090e19;
+		border:2px solid #090e19;
+		color:white;
+		font-family: 'Montserrat', sans-serif;
+		font-weight:bold;
+		width:120px;
+		height:50px;
+		border-radius:10px;
+	}
+		#Addbutton:hover{
+			background-color:;
+		}
+
+	#list-group{
+		list-style:none;
+		margin-left:-40px;
+	}
+
+	#ULlist li{
+		border-radius:4px;
+		padding:10px;
+		margin:1px;
+		color:#eee;
+		background-color:#090e19;
+	}
+
+	#list-group{
+		margin-bottom:10px;
+		margin-top:30px;
+	}
+	#price{
+		color:#eee;
+		font-weight:bold;
+	}
+	
+	#type{
+		border:2px lightgrey solid;
+		border-radius:2px;
+		color:grey;
+		font-family:arial;
+		width:30%;
+	}
+
+	#form{
+		margin-bottom:50px;
+	}
+
+	.span{
+		padding-right:10px;
+		color:green;
+	}
+
+	.Delete{
+		font-family: 'Montserrat', sans-serif;
+		float:right;
+		background-color:#1f2d51;
+		border:none;
+		border-radius:3px;
+		color:white;
+		font-weight:bold;
+	}
+	#end{
+		float:right;
+	}
+
+		#total{
+			height:35px;
+			grid-area:Total;
+			display:grid;
+			align-content: center;
+			position:absolute;
+			bottom:8px;
+			width:100%;
+			color:#eee;
+			background-color:#090e19;
+			border-radius:5px;
+
+			grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+			grid-template-areas:
+			" buy . . checkout overall";
+		}
+
+			.checkout{
+				grid-area:checkout;
+			}
+			#overall{
+				grid-area:overall;
+			}
+			#buy{
+				grid-area:buy;
+				margin-left:10px;
+			}
+			#clear{
+				width:80px;
+				text-align:center;
+			}
+			.refresh{
+				width:100px;
+			}
+
+#footer{
+	grid-area:footer;
+	text-align:center;
+	color:grey;
+}
+
